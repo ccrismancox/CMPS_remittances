@@ -1,0 +1,271 @@
+Table 1
+% latex table generated in R 4.3.1 by xtable 1.8-4 package
+% Wed Sep 20 11:53:04 2023
+\begin{table}[ht!]
+\centering
+\caption{Summary statistics for main variables} 
+\label{tab:sumStat}
+\begin{tabular}{rddddl}
+  \toprule
+\multicolumn{1}{c}{Variable} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St.~Dev.} & \multicolumn{1}{c}{Max} & \multicolumn{1}{c}{Source/Measurement} \\ 
+  \midrule
+Domestic attacks & 0.00 & 12.98 & 44.68 & 570.00 & GTD \\ 
+  Remittances per capita & 0.00 & 0.97 & 1.70 & 15.96 & World Bank \\ 
+  Democracy & 0.00 & 0.44 & 0.50 & 1.00 & Polity IV \\ 
+  Anocracy & 0.00 & 0.38 & 0.48 & 1.00 & Polity IV \\ 
+  Mil. per. pc (logged) & 0.00 & 0.36 & 0.28 & 1.89 & COW-NMC \\ 
+  Population (logged) & 12.79 & 16.53 & 1.50 & 21.02 & World Bank \\ 
+  Economic growth & -50.25 & 3.88 & 4.71 & 35.22 & World Bank \\ 
+  GDP per capita (logged) & 4.90 & 8.16 & 1.53 & 11.24 & World Bank \\ 
+  Free press & 0.00 & 0.35 & 0.48 & 1.00 & Li (2005)/Freedom House \\ 
+  GINI & 22.90 & 41.54 & 9.29 & 64.80 & World Bank \\ 
+  NHI & 1.00 & 1.26 & 0.59 & 6.05 & \citet{BCG2014} \\ 
+  Political inequality & 0.00 & 0.17 & 0.21 & 0.97 & EPR \\ 
+  \# of ongoing civil conflicts & 0.00 & 0.30 & 0.71 & 6.00 & UCDP \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+Table 2
+% latex table generated in R 4.3.1 by xtable 1.8-4 package
+% Wed Sep 20 11:53:04 2023
+\begin{table}[ht!]
+\centering
+\caption{Domestic terrorist attack descriptions by regime type} 
+\label{tab:terror_diffs}
+\begin{tabular}{lrrrr}
+  \toprule
+ & Autocracy mean & Democracy mean & $t$ stat. & $p$-value \\ 
+  \midrule
+Assault & 0.20 & 0.17 & 0.89 & 0.38 \\ 
+  Assassination & 0.07 & 0.09 & -1.03 & 0.30 \\ 
+  Hijacking & 0.03 & 0.01 & 1.60 & 0.11 \\ 
+  Unarmed & 0.01 & 0.02 & -0.54 & 0.59 \\ 
+  Bombing & 0.42 & 0.48 & -1.46 & 0.15 \\ 
+  Infrastructure & 0.04 & 0.12 & -5.36 & 0.00 \\ 
+  Hostage & 0.15 & 0.07 & 2.50 & 0.01 \\ 
+  Other & 0.08 & 0.04 & 2.06 & 0.04 \\ 
+   \midrule
+Total attacks & 1.93 & 15.41 & -9.35 & 0.00 \\ 
+  Fatalities/attack & 7.08 & 1.32 & 2.72 & 0.01 \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+Context for remittances 
+ remitPC 
+155.5907 
+ remitPC 
+17.80805 
+Table A1
+% latex table generated in R 4.3.1 by xtable 1.8-4 package
+% Wed Sep 20 11:53:05 2023
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+  \toprule
+country & nyears & nAttacks \\ 
+  \midrule
+Algeria &  43 & 1258 \\ 
+  Angola &   6 &   6 \\ 
+  Argentina &  35 &  58 \\ 
+  Armenia &  18 &   1 \\ 
+  Australia &  43 &   1 \\ 
+  Austria &  43 &   9 \\ 
+  Azerbaijan &  18 &   2 \\ 
+  Bangladesh &  34 & 326 \\ 
+  Belgium &  38 &  31 \\ 
+  Bolivia &  37 &  68 \\ 
+  Brazil &  38 &  30 \\ 
+  Burundi &   9 &  39 \\ 
+  Canada &  18 &   8 \\ 
+  Central African Republic &  16 &   1 \\ 
+  Chad &   8 &   2 \\ 
+  Chile &  18 & 1080 \\ 
+  China &  31 &  66 \\ 
+  Colombia &  43 & 5114 \\ 
+  Congo &  35 &   1 \\ 
+  Costa Rica &  34 &   8 \\ 
+  Cyprus &  37 &   8 \\ 
+  Democratic Republic of the Congo &   8 &  52 \\ 
+  Dominican Republic &  43 &  27 \\ 
+  Ecuador &  28 &  33 \\ 
+  Egypt &  36 & 346 \\ 
+  El Salvador &  37 & 3719 \\ 
+  Estonia &  17 &   1 \\ 
+  Ethiopia &  31 &  38 \\ 
+  France &  38 & 1100 \\ 
+  Gabon &  34 &   1 \\ 
+  Georgia &  16 &  16 \\ 
+  Germany &  22 &  30 \\ 
+  Ghana &  34 &   7 \\ 
+  Greece &  37 & 518 \\ 
+  Guatemala &  36 & 490 \\ 
+  Guinea &  26 &   1 \\ 
+  Haiti &  29 &   4 \\ 
+  Honduras &  39 & 110 \\ 
+  India &  38 & 4057 \\ 
+  Indonesia &  30 & 251 \\ 
+  Iran &  22 & 102 \\ 
+  Iraq &   3 & 768 \\ 
+  Ireland &  23 &   1 \\ 
+  Israel &  43 & 1345 \\ 
+  Italy &  43 & 682 \\ 
+  Ivory Coast &  21 &   3 \\ 
+  Jamaica &  37 &   2 \\ 
+  Japan &  30 &  77 \\ 
+  Jordan &  37 &  12 \\ 
+  Kazakhstan &  18 &   1 \\ 
+  Kenya &  43 &  52 \\ 
+  Laos &  28 &   1 \\ 
+  Latvia &  17 &   2 \\ 
+  Lebanon &   8 &  42 \\ 
+  Lesotho &  38 &  12 \\ 
+  Macedonia &  17 &  42 \\ 
+  Madagascar &  32 &   2 \\ 
+  Malaysia &  31 &   3 \\ 
+  Mali &  38 &  63 \\ 
+  Mexico &  34 & 111 \\ 
+  Morocco &  38 &  14 \\ 
+  Mozambique &  32 & 207 \\ 
+  Myanmar &  26 & 140 \\ 
+  Nepal &  20 & 329 \\ 
+  Netherlands &  43 &  38 \\ 
+  Nicaragua &  24 & 244 \\ 
+  Niger &  39 &  25 \\ 
+  Nigeria &  36 & 935 \\ 
+  Pakistan &  37 & 1791 \\ 
+  Panama &  34 &  46 \\ 
+  Papua New Guinea &  34 &  34 \\ 
+  Paraguay &  38 &  22 \\ 
+  Peru &  23 & 1250 \\ 
+  Philippines &  36 & 2653 \\ 
+  Portugal &  38 &  62 \\ 
+  Russia &  19 & 401 \\ 
+  Rwanda &  37 &  70 \\ 
+  Senegal &  39 &  83 \\ 
+  Sierra Leone &  33 &  79 \\ 
+  South Africa &  43 & 742 \\ 
+  South Korea &  37 &   5 \\ 
+  Spain &  38 & 2432 \\ 
+  Sri Lanka &  38 & 2355 \\ 
+  Sudan &  36 &  98 \\ 
+  Suriname &  36 &  49 \\ 
+  Swaziland &  26 &   1 \\ 
+  Sweden &  43 &   8 \\ 
+  Switzerland &  36 &   4 \\ 
+  Tajikistan &  11 &   2 \\ 
+  Tanzania &  18 &   4 \\ 
+  Thailand &  38 & 174 \\ 
+  Togo &  39 &   6 \\ 
+  Tunisia &  37 &  16 \\ 
+  Uganda &  14 & 108 \\ 
+  United Kingdom &  26 & 1414 \\ 
+  United States of America &  36 & 542 \\ 
+  Uzbekistan &   7 &   2 \\ 
+  Venezuela &  28 &  19 \\ 
+  Zimbabwe &  22 &  18 \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+GDP pc quantiles
+      ldem   llgdppc
+1 1.000000  1063.713
+2 2.718282  1063.713
+3 1.000000 11516.387
+4 2.718282 11516.387
+Information in Tables 3 and B1
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, Sep 20, 2023 - 11:57:18 AM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Negative Binomial Results} 
+  \label{tab:regTable} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Domestic terrorist attacks} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Remittances & 0.15^{**} & 0.20^{**} & 0.19^{**} & -0.46 \\ 
+  & (0.06) & (0.07) & (0.06) & (0.33) \\ 
+  Remittances $\times$ Democracy & -0.46^{**} & -0.48^{**} & -0.42^{**} & -2.25^{*} \\ 
+  & (0.14) & (0.13) & (0.11) & (1.18) \\ 
+  Remittances $\times$ GDP pc &  &  &  & 0.10^{*} \\ 
+  &  &  &  & (0.05) \\ 
+  Remittances $\times$ Anocracy & -0.17^{*} & -0.27^{**} & -0.24^{**} & 2.13 \\ 
+  & (0.09) & (0.09) & (0.09) & (1.29) \\ 
+  Remittances $\times$ Democracy $\times$ GDP pc &  &  &  & 0.16 \\ 
+  &  &  &  & (0.13) \\ 
+  Remittances $\times$ Anocracy $\times$ GPP pc &  &  &  & -0.30^{*} \\ 
+  &  &  &  & (0.16) \\ 
+  Democracy & 0.46 & 0.46 & 0.43 & -0.83 \\ 
+  & (0.35) & (0.30) & (0.29) & (2.07) \\ 
+  Anocracy & 1.59^{**} & 1.38^{**} & 1.28^{**} & -1.17 \\ 
+  & (0.32) & (0.27) & (0.27) & (2.06) \\ 
+  Military personnel &  & 2.05^{**} & 1.61^{**} & 2.24^{**} \\ 
+  &  & (0.57) & (0.59) & (0.58) \\ 
+  Population &  & 3.70^{**} & 2.77^{**} & 4.25^{**} \\ 
+  &  & (0.90) & (0.84) & (0.92) \\ 
+  GDP growth &  & -0.02 & -0.01 & -0.02 \\ 
+  &  & (0.01) & (0.01) & (0.01) \\ 
+  GDP per capita &  & 0.88^{**} & 0.75^{*} & 0.71 \\ 
+  &  & (0.41) & (0.42) & (0.50) \\ 
+  Free Press &  & 0.27 & 0.27 & 0.15 \\ 
+  &  & (0.19) & (0.19) & (0.19) \\ 
+  GINI &  & -0.001 & -0.01 & -0.01 \\ 
+  &  & (0.02) & (0.02) & (0.02) \\ 
+  Horizontal inequality &  & 2.20^{**} & 2.10^{**} & 2.19^{**} \\ 
+  &  & (0.30) & (0.32) & (0.29) \\ 
+  Excluded population &  & -0.14 & -0.21 & -0.01 \\ 
+  &  & (0.58) & (0.57) & (0.55) \\ 
+  \# of ongoing civil conflicts &  & 1.04^{**} & 0.74^{**} & 1.01^{**} \\ 
+  &  & (0.14) & (0.12) & (0.14) \\ 
+  Lag attacks &  &  & 0.01^{**} &  \\ 
+  &  &  & (0.001) &  \\ 
+  Democracy $\times$ GDP pc &  &  &  & 0.22 \\ 
+  &  &  &  & (0.29) \\ 
+  Anocracy $\times$ GPP pc &  &  &  & 0.35 \\ 
+  &  &  &  & (0.28) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{2,979} & \multicolumn{1}{c}{2,979} & \multicolumn{1}{c}{2,979} & \multicolumn{1}{c}{2,979} \\ 
+Log Likelihood & \multicolumn{1}{c}{-5,616.71} & \multicolumn{1}{c}{-5,467.17} & \multicolumn{1}{c}{-5,406.32} & \multicolumn{1}{c}{-5,450.49} \\ 
+$\theta$ & \multicolumn{1}{c}{0.44^{**}  (0.02)} & \multicolumn{1}{c}{0.55^{**}  (0.02)} & \multicolumn{1}{c}{0.62^{**}  (0.03)} & \multicolumn{1}{c}{0.57^{**}  (0.02)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$p<[0.*]$} \\ 
+ & \multicolumn{4}{r}{$p<[0.**]$} \\ 
+ & \multicolumn{4}{r}{Coefficients from negative binomial models. Clustered stanard errors in parenthesis.} \\ 
+\end{tabular} 
+\end{table} 
+Combined coefficients Table 3
+        lremitPC lremitPC lremitPC
+est        -0.31    -0.28    -0.23
+se          0.14     0.13     0.12
+p value     0.03     0.03     0.05
+        Estimate   SE pnorm(abs(coefs4[, 1]/coefs4[, 2]), lower = F) * 2
+auto-lo     0.23 0.11                                               0.03
+auto-hi     0.47 0.20                                               0.02
+dem-lo     -0.92 0.35                                               0.01
+dem-hi     -0.30 0.13                                               0.02
+Table 4
+% latex table generated in R 4.3.1 by xtable 1.8-4 package
+% Wed Sep 20 11:57:20 2023
+\begin{table}[ht]
+\centering
+\caption{Average marginal effect  of remittances on domestic terrorist attacks (Model 2)} 
+\label{tab.mar}
+\begin{tabular}{rcc}
+  \toprule
+ & Autocracy & Democracy \\ 
+  \midrule
+Change in attacks & $ 2.38 $ & $ -3.77 $ \\ 
+   & $(0.48, 4.27)$ & $(-7.30, -0.24)$ \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+Vuong test for the V-Dem measures: competition v. constraints
+Inconclusive, but suggestive in favor of competition
+AIC selection for the V-Dem measures: competition v. constraints
+Selects compeition
