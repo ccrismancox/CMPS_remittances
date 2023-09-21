@@ -210,28 +210,23 @@ deltaMethod(r5.dummies, "lremitPC+-1.436*`lremitPC:lv2psoppaut`", vcov=v5.dummie
 deltaMethod(r5.dummies, "lremitPC+2.761*`lremitPC:lv2psoppaut`", vcov=v5.dummies)
 
 
-cat("Vuong test for the V-Dem measures: competition v. constraints\n")
-vuongtest(r1.dummies, r3.dummies) 
-cat("Inconclusive, but suggestive in favor of competition\n")
-
-# model fit stats favor competition
-cat("AIC selection for the V-Dem measures: competition v. constraints\n")
-which.min(c(AIC(r1.dummies),AIC(r3.dummies)))
-cat("Selects compeition\n")
 
 
 vdem1.dummies <- r1.dummies
 vdem2.dummies <- r2.dummies 
+vdem3.dummies <- r3.dummies 
 
 vdemV1.dummies <- v1.dummies
 vdemV2.dummies <- v2.dummies
+vdemV3.dummies <- v3.dummies
 
 # combined coef test
 test.vdem1 <- tests
 test.vdem2 <- tests2
 
 VdemDataset <- copy(remitNEW.1a)
-save(list=c("vdem1.dummies", "vdem2.dummies",
-            "vdemV1.dummies", "vdemV2.dummies", "VdemDataset",
+save(list=c("vdem1.dummies", "vdem2.dummies","vdem3.dummies",
+            "vdemV1.dummies", "vdemV2.dummies", "vdemV3.dummies",
+            "VdemDataset",
             "test.vdem1", "test.vdem2"), file="../output/vdem_competition.rdata")
 

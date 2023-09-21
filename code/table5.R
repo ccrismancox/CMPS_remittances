@@ -134,7 +134,7 @@ glance_custom.negbin <- function(x, ...) {
                     "logLik"=logLik(x))
   return(out)
 }
-
+cat("\nTable 5\n")
 cat(modelsummary(list("(5)"=r1.dummies,
                   "(6)"=r2.dummies, 
                   "(7)"=vdem1.dummies, 
@@ -164,8 +164,8 @@ cat("Wald tests for model 6 v model 5\n")
 print(linearHypothesis(r2.dummies, c("lremitPC:lxconst", "lxconst"), vcov=v2.dummies )) 
 cat("Wald tests for model 8 v model 7\n")
 print(linearHypothesis(vdem2.dummies, c("lremitPC:lv2xlg_legcon", "lv2xlg_legcon"), vcov=vdemV2.dummies )) 
-cat("With polity, we fail to reject the null that constrains add nothing to the model\n")
-cat("With V-Dem, we  reject the null that constrains add nothing to the model\n")
+cat("With polity, we fail to reject the null that constraints add nothing to the model\n")
+cat("With V-Dem, we  reject the null that constraints add nothing to the model\n")
 
 
 XR <- cbind(1,matrix(quantile(remitNEW.1a[sam==1]$lxrcomp,c(0.1,0.9)), ncol=1))
@@ -242,21 +242,27 @@ while(r3.dummies$converged == FALSE| r3.dummies$family$family=="poisson"){
 }
 v3.dummies <- vcovCL(r3.dummies, remitNEW.1a[sam==1]$ccode)
 
-# Vuong test (POLITY)
-# Fails the first test but some evidence in 
-# favor of r1 (competition)
+## Comparative model testing
 cat("Vuong test for the polity measures: competition v. constraints\n")
-vuongtest(r1.dummies, r3.dummies) 
-cat("Inconclusive, but suggestive in favor of competition\n")
+print(vuongtest(r1.dummies, r3.dummies) )
+cat("Inconclusive based on the test of omega, but suggestive in favor of competition\n")
 
-# model fit stats favor competition
+
 cat("AIC selection for the polity measures: competition v. constraints\n")
-which.min(c(AIC(r1.dummies),AIC(r3.dummies)))
+print(which.min(c(AIC(r1.dummies),AIC(r3.dummies))))
 cat("Selects compeition\n")
 
 
 
 
+cat("Vuong test for the V-Dem measures: competition v. constraints\n")
+print(vuongtest(vdem1.dummies, vdem3.dummies) )
+cat("Inconclusive, but suggestive in favor of competition\n")
+
+# model fit stats favor competition
+cat("AIC selection for the V-Dem measures: competition v. constraints\n")
+print(which.min(c(AIC(vdem1.dummies),AIC(vdem3.dummies))))
+cat("Selects compeition\n")
 
 
 

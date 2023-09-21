@@ -1,6 +1,6 @@
 Table 1
 % latex table generated in R 4.3.1 by xtable 1.8-4 package
-% Wed Sep 20 11:53:04 2023
+% Wed Sep 20 16:00:41 2023
 \begin{table}[ht!]
 \centering
 \caption{Summary statistics for main variables} 
@@ -27,7 +27,7 @@ Domestic attacks & 0.00 & 12.98 & 44.68 & 570.00 & GTD \\
 \end{table}
 Table 2
 % latex table generated in R 4.3.1 by xtable 1.8-4 package
-% Wed Sep 20 11:53:04 2023
+% Wed Sep 20 16:00:41 2023
 \begin{table}[ht!]
 \centering
 \caption{Domestic terrorist attack descriptions by regime type} 
@@ -57,7 +57,7 @@ Context for remittances
 17.80805 
 Table A1
 % latex table generated in R 4.3.1 by xtable 1.8-4 package
-% Wed Sep 20 11:53:05 2023
+% Wed Sep 20 16:00:41 2023
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrr}
@@ -175,7 +175,7 @@ GDP pc quantiles
 Information in Tables 3 and B1
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Wed, Sep 20, 2023 - 11:57:18 AM
+% Date and time: Wed, Sep 20, 2023 - 04:04:23 PM
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
   \caption{Negative Binomial Results} 
@@ -251,7 +251,7 @@ dem-lo     -0.92 0.35                                               0.01
 dem-hi     -0.30 0.13                                               0.02
 Table 4
 % latex table generated in R 4.3.1 by xtable 1.8-4 package
-% Wed Sep 20 11:57:20 2023
+% Wed Sep 20 16:04:25 2023
 \begin{table}[ht]
 \centering
 \caption{Average marginal effect  of remittances on domestic terrorist attacks (Model 2)} 
@@ -265,7 +265,363 @@ Change in attacks & $ 2.38 $ & $ -3.77 $ \\
    \bottomrule
 \end{tabular}
 \end{table}
+
+Table 5
+\begin{table}
+
+\caption{Exploring the political competition mechanism \label{tab:mechTable}}
+\centering
+\begin{tabular}[t]{ldddd}
+\toprule
+  & {(5)} & {(6)} & {(7)} & {(8)}\\
+\midrule
+Remittances & 0.22 \mbox{**} & 0.22 \mbox{*} & -0.04 \mbox{} & -0.31 \mbox{}\\
+ & (0.09) & (0.13) & (0.20) & (0.47)\\
+Remittances $\times$ Competition & -0.19 \mbox{**} & -0.29 \mbox{**} & -0.35 \mbox{} & -1.43 \mbox{**}\\
+ & (0.05) & (0.10) & (0.38) & (0.47)\\
+Remittances $\times$ Constraints & {} & 0.06 \mbox{} & {} & 0.98 \mbox{}\\
+ & {} & (0.06) & {} & (0.78)\\
+\midrule
+Observations & 2902 & 2902 & 2892 & 2892\\
+Log Likelihood & -5285.66 & -5282.53 & -5336.78 & -5310.58\\
+$\theta$ & 0.53 & 0.53 & 0.53 & 0.55\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}\footnotesize $^*p<0.1$, $^{**}p<0.05$. Coefficients from negative binomial models. Standard errors in parentheses, clustered on country. For the combined coefficients, the high (low) values are the 90th (10th) percentile of the competition measure. For models with constraints, the constraints variable is fixed to its median value when combined.  Coefficients for the control variables are suppressed for space.}\\
+\end{tabular}
+\end{table}
+Wald tests for model 6 v model 5
+Linear hypothesis test
+
+Hypothesis:
+lremitPC:lxconst = 0
+lxconst = 0
+
+Model 1: restricted model
+Model 2: domAttacks ~ lremitPC * lxrcomp + lremitPC * lxconst + llmil + 
+    llpop + lgdpgrowth + llgdppc + lpress + lgini + lmaxlowx + 
+    lwexcluded + lnum_ongoing_ucdp + factor(ccode) + factor(year) - 
+    1
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df  Chisq Pr(>Chisq)
+1   2749                     
+2   2747  2 2.3758     0.3049
+Wald tests for model 8 v model 7
+Linear hypothesis test
+
+Hypothesis:
+lremitPC:lv2xlg_legcon = 0
+lv2xlg_legcon = 0
+
+Model 1: restricted model
+Model 2: domAttacks ~ lremitPC * lv2x_partipdem + lremitPC * lv2xlg_legcon + 
+    llmil + llpop + lgdpgrowth + llgdppc + lpress + lgini + lmaxlowx + 
+    lwexcluded + lnum_ongoing_ucdp + factor(ccode) + factor(year) - 
+    1
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df  Chisq Pr(>Chisq)   
+1   2738                        
+2   2736  2 12.783   0.001676 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+With polity, we fail to reject the null that constraints add nothing to the model
+With V-Dem, we  reject the null that constraints add nothing to the model
+Combined coefficients for Table 5
+         [,1]  [,2]  [,3]  [,4]
+est      0.22  0.47 -0.06  0.22
+s.e.     0.09  0.17  0.17  0.12
+p-value  0.02  0.01  0.71  0.06
+est     -0.35 -0.41 -0.26 -0.58
+s.e.     0.13  0.17  0.12  0.21
+p-value  0.01  0.01  0.04  0.01
+Vuong test for the polity measures: competition v. constraints
+
+Model 1 
+ Class: negbin 
+ Call: glm.nb(formula = domAttacks ~ lremitPC * lxrcomp + llmil + llpop + ...
+
+Model 2 
+ Class: negbin 
+ Call: glm.nb(formula = domAttacks ~ lremitPC * lxconst + llmil + llpop + ...
+
+Variance test 
+  H0: Model 1 and Model 2 are indistinguishable 
+  H1: Model 1 and Model 2 are distinguishable 
+    w2 = 0.004,   p = 0.226
+
+Non-nested likelihood ratio test 
+  H0: Model fits are equal for the focal population 
+  H1A: Model 1 fits better than Model 2 
+    z = 2.912,   p = 0.00179
+  H1B: Model 2 fits better than Model 1 
+    z = 2.912,   p = 0.9982
+Inconclusive based on the test of omega, but suggestive in favor of competition
+AIC selection for the polity measures: competition v. constraints
+[1] 1
+Selects compeition
 Vuong test for the V-Dem measures: competition v. constraints
+
+Model 1 
+ Class: negbin 
+ Call: glm.nb(formula = domAttacks ~ lremitPC * lv2x_partipdem + llmil + ...
+
+Model 2 
+ Class: negbin 
+ Call: glm.nb(formula = domAttacks ~ lremitPC * lv2xlg_legcon + llmil + ...
+
+Variance test 
+  H0: Model 1 and Model 2 are indistinguishable 
+  H1: Model 1 and Model 2 are distinguishable 
+    w2 = 0.019,   p = 0.555
+
+Non-nested likelihood ratio test 
+  H0: Model fits are equal for the focal population 
+  H1A: Model 1 fits better than Model 2 
+    z = 0.996,   p = 0.16
+  H1B: Model 2 fits better than Model 1 
+    z = 0.996,   p = 0.8404
 Inconclusive, but suggestive in favor of competition
 AIC selection for the V-Dem measures: competition v. constraints
+[1] 1
 Selects compeition
+Table 6
+\begin{table}
+
+\caption{Political competition within democracies\label{tab:demMech}}
+\centering
+\begin{tabular}[t]{lddddd}
+\toprule
+  & {(1)} & {(2)} & {(3)} & {(4)} & {(5)}\\
+\midrule
+Remittances & 0.16 \mbox{} & -0.98 \mbox{**} & -0.52 \mbox{*} & -0.63 \mbox{**} & 1.92 \mbox{**}\\
+ & (0.20) & (0.49) & (0.29) & (0.31) & (0.80)\\
+Remittances $\times$ PR & -0.47 \mbox{**} & 0.81 \mbox{} & {} & {} & {}\\
+ & (0.24) & (0.53) & {} & {} & {}\\
+Remittances $\times$ legislative frac. & {} & {} & 0.41 \mbox{} & 0.66 \mbox{} & {}\\
+ & {} & {} & (0.39) & (0.60) & {}\\
+Remittances $\times$ ELF & {} & 4.89 \mbox{**} & {} & 0.14 \mbox{} & {}\\
+ & {} & (1.95) & {} & (1.18) & {}\\
+Remittances $\times$ ELF  $\times$ PR & {} & -5.66 \mbox{**} & {} & {} & {}\\
+ & {} & (2.01) & {} & {} & {}\\
+Remittances $\times$ ELF $\times$ leg. frac. & {} & {} & {} & -0.55 \mbox{} & {}\\
+ & {} & {} & {} & (1.66) & {}\\
+\midrule
+Observations & 1465 & 1465 & 1465 & 1465 & 650\\
+Log Likelihood & -3044.62 & -3031.97 & -3048.21 & -3046.96 & -2665.77\\
+Country fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Year fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Controls & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+$\theta$ & 0.84 & 0.87 & 0.82 & 0.82 & {}\\
+$R^2$ & {} & {} & {} & {} & 0.86\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\footnotesize $^*p<0.1$, $^{**}p<0.05$. Regression coefficients. Standard errors in parentheses, clustered on country.}\\
+\end{tabular}
+\end{table}Table 6 combined coefficients (est se p-val) 
+          [,1]  [,2]  [,3]  [,4] [,5]
+lremitPC  0.16    NA -0.29    NA   NA
+          0.20    NA  0.13    NA   NA
+lremitPC  0.41    NA  0.03    NA   NA
+            NA -0.59    NA -0.27   NA
+            NA  0.35    NA  0.13   NA
+            NA  0.10    NA  0.04   NA
+            NA  1.61    NA -0.35   NA
+            NA  0.62    NA  0.22   NA
+            NA  0.01    NA  0.12   NA
+lremitPC -0.31    NA -0.21    NA   NA
+          0.14    NA  0.13    NA   NA
+lremitPC  0.03    NA  0.11    NA   NA
+            NA -0.23    NA -0.16   NA
+            NA  0.15    NA  0.19   NA
+            NA  0.12    NA  0.41   NA
+            NA -0.58    NA -0.28   NA
+            NA  0.17    NA  0.16   NA
+            NA  0.00    NA  0.07   NA
+detrend model picks  2 
+Table D1
+\begin{table}
+
+\caption{Negative binomials with different measures and transformations of remittances \label{tab:diff.remit}}
+\centering
+\begin{tabular}[t]{lddddddd}
+\toprule
+  & {Remittances/capita (Model 2)} & {Log remittances/capita} & {Sqrt remittances/capita} & {Detrended remittances/capita} & {Log Remittances/GDP} & {Log (Remittances/capita)/GDP} & {IMF Remittances/capita}\\
+\midrule
+Remittances & 0.20 \mbox{**} & 0.06 \mbox{} & 0.60 \mbox{*} & 0.26 \mbox{} & 0.11 \mbox{} & 0.16 \mbox{} & 0.29 \mbox{*}\\
+ & (0.07) & (0.09) & (0.35) & (0.41) & (0.11) & (0.10) & (0.15)\\
+Remittances $\times$ Dem. & -0.48 \mbox{**} & -0.24 \mbox{**} & -1.26 \mbox{**} & -0.58 \mbox{} & -0.27 \mbox{**} & -0.34 \mbox{**} & -0.76 \mbox{**}\\
+ & (0.13) & (0.11) & (0.38) & (0.43) & (0.13) & (0.10) & (0.21)\\
+\midrule
+Observations & 2979 & 2979 & 2979 & 2979 & 2979 & 2979 & 2511\\
+Log Likelihood & -5466.17 & -5475.76 & -5468.95 & -5477.07 & -5475.44 & -5466.56 & -5035.83\\
+$\hat{\beta}_{\text{Remittances}}  + \hat{\beta}_{\text{Remittances $\times$ Democracy}}$ & -0.28^{**} & -0.17^* & -0.66^{**} & -0.31^{**} & -0.17^* & -0.18^{**} & -0.48^{**}\\
+NA & {NA} & {NA} & {NA} & {NA} & {NA} & {NA} & \vphantom{3} {NA}\\
+NA & {NA} & {NA} & {NA} & {NA} & {NA} & {NA} & \vphantom{2} {NA}\\
+NA & {NA} & {NA} & {NA} & {NA} & {NA} & {NA} & \vphantom{1} {NA}\\
+NA & {NA} & {NA} & {NA} & {NA} & {NA} & {NA} & {NA}\\
+ & (0.13) & (0.10) & (0.33) & (0.13) & (0.10) & (0.09) & (0.19)\\
+\midrule Country fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Year fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Controls & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+$\theta$ & 0.55 & 0.55 & 0.55 & 0.55 & 0.55 & 0.56 & 0.54\\
+\bottomrule
+\multicolumn{8}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05}\\
+\multicolumn{8}{l}{\rule{0pt}{1em}\footnotesize $^*p<0.1$, $^{**}p<0.05$. Regression coefficients. Standard errors in parentheses, clustered on country.}\\
+\end{tabular}
+\end{table}Combined coefs for Table D1
+Correlation among democracy measures
+[1] 0.9436168
+[1] 0.7823057
+Table D2
+\begin{table}
+
+\caption{Negative binomials with different measures of democracy \label{tab:diff.dem}}
+\centering
+\begin{tabular}[t]{lddddddd}
+\toprule
+  & {\begin{tabular}{c}Polity \\ cutpoints at $\pm 7$\\ (Model 2)\end{tabular}} & {\begin{tabular}{c}Polity \\ cutpoints at $\pm 6$\end{tabular}} & {\begin{tabular}{c}Polity \\ cutpoints at $\pm 5$\end{tabular}} & {\begin{tabular}{c}Polity \\ linear \end{tabular}} & {\begin{tabular}{c}Polity \\ quadratic \end{tabular}} & {\begin{tabular}{c}V-DEM \\ categorical \end{tabular}} & {\begin{tabular}{c}V-DEM \\ Polyarchy index \end{tabular}}\\
+\midrule
+Remittances & 0.20 \mbox{**} & 0.17 \mbox{**} & 0.10 \mbox{} & -0.12 \mbox{} & -0.35 \mbox{**} & 0.13 \mbox{} & -0.01 \mbox{}\\
+ & (0.07) & (0.09) & (0.09) & (0.08) & (0.15) & (0.09) & (0.20)\\
+Remittances $\times$ Dem. & -0.48 \mbox{**} & -0.50 \mbox{**} & -0.40 \mbox{**} & -0.02 \mbox{**} & -0.03 \mbox{**} & -0.43 \mbox{**} & -0.29 \mbox{}\\
+ & (0.13) & (0.13) & (0.13) & (0.01) & (0.01) & (0.14) & (0.28)\\
+Remittances $\times$ Dem. sq. & {} & {} & {} & {} & 0.00 \mbox{**} & {} & {}\\
+ & {} & {} & {} & {} & (0.00) & {} & {}\\
+Remittances $\times$ Electoral Autocracy & {} & {} & {} & {} & {} & -0.40 \mbox{**} & {}\\
+ & {} & {} & {} & {} & {} & (0.14) & {}\\
+\midrule
+Combined coefficient on remittances & 0.20^{**} & 0.17^{**} & 0.10 & 0.10 & 0.21^{**} & 0.13 & -0.05\\
+(Autocracy) & (0.07) & (0.09) & (0.09) & (0.07) & (0.08) & (0.09) & (0.16)\\
+Combined coefficient on remittances & -0.28^{**} & -0.33^{**} & -0.30^{**} & -0.33^{**} & -0.25^{**} & -0.30^{**} & -0.26^{**}\\
+(Democracy) & (0.13) & (0.13) & (0.12) & (0.12) & (0.11) & (0.12) & (0.13)\\
+\midrule Country fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Year fixed effects & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Controls & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes}\\
+Observations & 2979 & 2979 & 2979 & 2979 & 2979 & 2979 & 2979\\
+Log Likelihood & -5466.17 & -5506.78 & -5508.30 & -5523.74 & -5489.09 & -5519.66 & -5524.01\\
+$\theta$ & 0.55 & 0.52 & 0.52 & 0.51 & 0.54 & 0.52 & 0.52\\
+\bottomrule
+\multicolumn{8}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05}\\
+\multicolumn{8}{l}{\rule{0pt}{1em}\footnotesize $^*p<0.1$, $^{**}p<0.05$. Regression coefficients. Standard errors in parentheses, clustered on country.}\\
+\end{tabular}
+\end{table}
+Table D3
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, Sep 20, 2023 - 04:16:42 PM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Alternative dependent variables and samples} 
+  \label{tab:alt_sam} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{1}{c}{Domestic Attacks (main)} & \multicolumn{1}{c}{Domestic Attacks (ESG)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{\textit{negative}} & \multicolumn{1}{c}{\textit{negative}} \\ 
+ & \multicolumn{1}{c}{\textit{binomial}} & \multicolumn{1}{c}{\textit{binomial}} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ Remittances per capita & 0.14^{*} & 0.23^{**} \\ 
+  & (0.08) & (0.05) \\ 
+  Remittances per capita $\times$ dem. & -0.85^{**} & -0.38^{**} \\ 
+  & (0.20) & (0.09) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{2,384} & \multicolumn{1}{c}{1,233} \\ 
+Log Likelihood & \multicolumn{1}{c}{-4,203.86} & \multicolumn{1}{c}{-4,012.51} \\ 
+$\theta$ & \multicolumn{1}{c}{0.50^{**}  (0.02)} & \multicolumn{1}{c}{1.74^{**}  (0.08)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$p<[0.*], p<[0.**]$. Coefficients from negative binomial models. Clustered standard errors in parentheses.} \\ 
+\end{tabular} 
+\end{table} 
+Combined coefs, se's, and p-vals for Table D3
+       lremitPC lremitPC
+est       -0.71    -0.16
+se         0.21     0.09
+p.vals     0.00     0.08
+Table D4
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, Sep 20, 2023 - 04:48:56 PM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Alternative model structure} 
+  \label{tab:diff.models} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Domestic Attacks} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{\textit{zero-inflated}} & \multicolumn{1}{c}{\textit{negative}} & \multicolumn{1}{c}{\textit{generalized linear}} & \multicolumn{1}{c}{\textit{Poisson}} \\ 
+ & \multicolumn{1}{c}{\textit{count data}} & \multicolumn{1}{c}{\textit{binomial}} & \multicolumn{1}{c}{\textit{mixed-effects}} & \multicolumn{1}{c}{\textit{}} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Remittances per capita & 0.20^{**} & 0.18^{*} & 0.23^{**} & 0.25^{*} \\ 
+  & (0.08) & (0.10) & (0.07) & (0.15) \\ 
+  Remittances per capita $\times$ dem. & -0.32^{**} & -0.32^{**} & -0.54^{**} & -0.47^{**} \\ 
+  & (0.12) & (0.14) & (0.10) & (0.24) \\ 
+  Constant &  & -22.73^{**} & -20.71^{**} &  \\ 
+  &  & (2.09) & (2.40) &  \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{2,979} & \multicolumn{1}{c}{3,790} & \multicolumn{1}{c}{3,790} & \multicolumn{1}{c}{3,790} \\ 
+Log Likelihood & \multicolumn{1}{c}{-5,245.47} & \multicolumn{1}{c}{-6,505.44} & \multicolumn{1}{c}{-5,873.74} & \multicolumn{1}{c}{-39,928.55} \\ 
+$\theta$ &  & \multicolumn{1}{c}{0.16^{**}  (0.01)} &  &  \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$p<[0.*], p<[0.**]$. Coefficients from negative binomial models. Clustered standard errors in parentheses (except for RE model).} \\ 
+\end{tabular} 
+\end{table} 
+Theta values for zero-inflated and RE negative binomials for Table D4
+[1] 0.98
+[1] 0.42
+Combined coefs, se's, and p-vals for Table D4
+       lremitPC lremitPC       lremitPC
+est       -0.12    -0.15 -0.31    -0.22
+se         0.12     0.09  0.07     0.16
+p.vals     0.31     0.10  0.00     0.19
+
+Table D.5
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Wed, Sep 20, 2023 - 04:50:06 PM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Effect of remittances after controlling for spending} 
+  \label{tab:alternative} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-2} D{.}{.}{-2} D{.}{.}{-2} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Domestic terrorist attacks} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Remittances per capita & 0.23^{**} & 0.21^{**} & 0.23^{**} \\ 
+  & (0.06) & (0.08) & (0.06) \\ 
+  Remittances per capita $\times$ Dem. & -0.54^{**} & -0.49^{**} & -0.55^{**} \\ 
+  & (0.11) & (0.13) & (0.12) \\ 
+  Infant mortality & 1.79^{**} &  & 1.82^{**} \\ 
+  & (0.63) &  & (0.64) \\ 
+  Military expenditures &  & -0.86 & -1.02 \\ 
+  &  & (1.14) & (1.26) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{2,969} & \multicolumn{1}{c}{2,930} & \multicolumn{1}{c}{2,924} \\ 
+Log Likelihood & \multicolumn{1}{c}{-5,445.32} & \multicolumn{1}{c}{-5,415.33} & \multicolumn{1}{c}{-5,395.91} \\ 
+$\theta$ & \multicolumn{1}{c}{0.57^{**}  (0.02)} & \multicolumn{1}{c}{0.55^{**}  (0.02)} & \multicolumn{1}{c}{0.57^{**}  (0.02)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$p<[0.*], p<[0.**]$. Coefficients from negative binomial models. Clustered standard errors in parentheses.} \\ 
+\end{tabular} 
+\end{table} 
+Combined coefficients for table D5
+       lremitPC lremitPC lremitPC
+est       -0.32    -0.29    -0.33
+se         0.12     0.13     0.12
+p.vals     0.01     0.02     0.01

@@ -92,8 +92,8 @@ while(r3A.dummies$converged == FALSE){
   
 }
 v3A.dummies <- vcovCL(r3A.dummies, remitNEW.dem[sam==1&polity2>=5]$ccode)
-cat("lfrac quantiles \n ")
-print(round(quantile(remitNEW.dem[sam==1]$lfrac),2))
+# cat("lfrac quantiles \n ")
+# print(round(quantile(remitNEW.dem[sam==1]$lfrac),2))
 
 lincom3A <- deltaMethod(r3A.dummies, 
                         "lremitPC+0.57*`lremitPC:lfrac`", 
@@ -134,9 +134,9 @@ while(r3D.dummies$converged == FALSE){
   
 }
 v3D.dummies <- vcovCL(r3D.dummies, remitNEW.dem[sam==1]$ccode)
-cat("Quantiles for eth and l frac\n")
-print(round(quantile(remitNEW.dem[sam==1]$ethfrac, na.rm=T), 2))
-print(round(quantile(remitNEW.dem[sam==1]$lfrac, na.rm=T), 2))
+# cat("Quantiles for eth and l frac\n")
+# print(round(quantile(remitNEW.dem[sam==1]$ethfrac, na.rm=T), 2))
+# print(round(quantile(remitNEW.dem[sam==1]$lfrac, na.rm=T), 2))
 
 lincom3D <- deltaMethod(r3D.dummies, 
                         "lremitPC+0.08*`lremitPC:ethfrac` + 
@@ -210,8 +210,8 @@ while(r3C.dummies$converged == FALSE){
   
 }
 v3C.dummies <- vcovCL(r3C.dummies, remitNEW.dem[sam==1]$ccode)
-cat("quantiles for ethfrac\n")
-print(round(quantile(remitNEW.dem[sam==1]$ethfrac, na.rm=T),2))
+# cat("quantiles for ethfrac\n")
+# print(round(quantile(remitNEW.dem[sam==1]$ethfrac, na.rm=T),2))
 
 
 
